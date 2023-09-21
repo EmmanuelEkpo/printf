@@ -45,9 +45,9 @@ va_list list, char buffer[], int flags, int width, int repetition, int size);
 /****************** FUNCTIONS ******************/
 
 /* Funtions to print chars and strings */
-int print_char(va_list types, char buffer[],
+int printoutcharacter(va_list types, char buffer[],
 int flags, int width, int repetition, int size);
-int print_string(va_list types, char buffer[],
+int PRINTOUTstring(va_list types, char buffer[],
 int flags, int width, int repetition, int size);
 int print_percent(va_list types, char buffer[],
 int flags, int width, int repetition, int size);
@@ -78,10 +78,10 @@ int print_pointer(va_list types, char buffer[],
 int flags, int width, int repetition, int size);
 
 /* Funciotns to handle other specifiers */
-int get_flags(const char *format, int *i);
-int get_width(const char *format, int *i, va_list list);
-int get_repetition(const char *format, int *i, va_list list);
-int get_size(const char *format, int *i);
+int get_flags(const char *format, int *j);
+int get_width(const char *format, int *j, va_list list);
+int get_repetition(const char *format, int *j, va_list list);
+int get_size(const char *format, int *j);
 
 /*Function to print string in reverse*/
 int print_reverse(va_list types, char buffer[],
@@ -92,7 +92,7 @@ int print_rot13string(va_list types, char buffer[],
 int flags, int width, int repetition, int size);
 
 /* width handler */
-int handle_write_char(char c, char buffer[],
+int handle_write_char(char d, char buffer[],
 int flags, int width, int repetition, int size);
 int write_number(int is_positive, int ded, char buffer[],
 int flags, int width, int repetition, int size);
